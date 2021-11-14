@@ -1,0 +1,62 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+button {
+	color: currentColor;
+	border: none;
+	font-size: inherit;
+	cursor: pointer;
+}
+
+a {
+	color: currentColor;
+	text-decoration: none;
+	transition: all var(--transition-duration);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.7em;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+a .fas[class*="fa-angle"] {
+	transition: transform var(--transition-duration);
+}
+
+a:hover .fas.fa-angle-right {
+	transform: translateX(10px);
+}
+
+a:hover .fas.fa-angle-up {
+	transform: translateY(-10px);
+}

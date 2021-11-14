@@ -1,0 +1,193 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Codingboat</title>
+	<link rel="icon" href="icons/site-icon.png" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+	<link rel="stylesheet" href="styles/variables.css" />
+	<link rel="stylesheet" href="styles/defaults.css" />
+	<link rel="stylesheet" href="styles/main.css" />
+	<link rel="stylesheet" href="styles/header.css" />
+	<link rel="stylesheet" href="styles/banner.css" />
+	<link rel="stylesheet" href="styles/languages.css" />
+	<link rel="stylesheet" href="styles/statistics.css" />
+	<link rel="stylesheet" href="styles/user-reviews.css" />
+	<link rel="stylesheet" href="styles/footer.css" />
+	<link rel="stylesheet" href="styles/media-queries.css" />
+
+	<script defer src="scripts/main.js"></script>
+	<script defer src="scripts/animation.js"></script>
+	<script defer src="scripts/init.js"></script>
+</head>
+
+<style>
+	body {
+		overflow-y: hidden;
+	}
+
+	div#root {
+		opacity: 0;
+		display: none;
+	}
+
+	div#preloader {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		gap: 20px;
+		background-color: #eee;
+		padding: 30px;
+	}
+
+	div#preloader .dot {
+		width: 50px;
+		height: 50px;
+		border-radius: 25px;
+		box-shadow: 0 5px 10px #0006;
+		background-color: white;
+		animation: load-anim .5s linear var(--anim-delay) infinite alternate;
+	}
+
+	@keyframes load-anim {
+		from {
+			transform: scale(.7);
+		}
+
+		to {
+			transform: scale(1);
+		}
+	}
+</style>
+
+<body>
+	<div id="preloader">
+		<div class="dot" style="--anim-delay: -.4s"></div>
+		<div class="dot" style="--anim-delay: -.2s"></div>
+		<div class="dot" style="--anim-delay: 0s"></div>
+	</div>
+
+	<div id="root">
+		<header>
+			<section class="content">
+				<img class="icon" src="icons/site-icon.png" />
+				<h1 class="item title">Codingboat</h1>
+				<nav id="header_nav">
+					<a href="#" class="item btn">Languages</a>
+					<a href="#" class="item btn">Log in</a>
+				</nav>
+				<button id="menu_btn" class="item btn fas fa-bars"></button>
+			</section>
+			<section id="overflow_menu">
+				<nav id="overflow_nav"></nav>
+			</section>
+		</header>
+
+		<main id="banner">
+			<img class="section-bg" src="images/banner.jpg"></img>
+			<section class="content">
+				<h1 id="banner_text">
+					We teach several<br>programming languages<br>and best practices
+				</h1>
+				<a href="#">Learn more <i class="fas fa-angle-right"></i></a>
+			</section>
+		</main>
+		<main id="languages">
+			<section class="content">
+				<h1 class="center section-heading">Languages we teach</h1>
+				<section id="language_list" class="section-content">
+					<div class="lang-card">
+						<img class="lang-icon" src="icons/html.png" />
+						<span class="lang-name">HTML</span>
+					</div>
+					<div class="lang-card">
+						<img class="lang-icon" src="icons/css.png" />
+						<span class="lang-name">CSS</span>
+					</div>
+					<div class="lang-card">
+						<img class="lang-icon" src="icons/javascript.png" />
+						<span class="lang-name">JavaScript</span>
+					</div>
+				</section>
+				<div class="right"><a href="#">See complete list <i class="fas fa-angle-right"></i></a></div>
+			</section>
+		</main>
+		<main id="statistics">
+			<img class="section-bg" src="images/banner.jpg"></img>
+			<section class="content">
+				<h1 class="center section-heading">Statistics</h1>
+				<section id="statistics_list" class="section-content">
+					<div class="stat">
+						<i class="stat-icon fas fa-pencil-ruler"></i>
+						<h3 class="stat_name">Tutorials</h3>
+						<h1 class="stat-value" data-value="100">&nbsp;</h1>
+					</div>
+					<div class="stat">
+						<i class="stat-icon fas fa-scroll"></i>
+						<h3 class="stat_name">Articles</h3>
+						<h1 class="stat-value" data-value="100">&nbsp;</h1>
+					</div>
+					<div class="stat">
+						<i class="stat-icon fas fa-tablet-alt"></i>
+						<h3 class="stat_name">Daily visits</h3>
+						<h1 class="stat-value" data-value="100">&nbsp;</h1>
+					</div>
+					<div class="stat">
+						<i class="stat-icon far fa-thumbs-up"></i>
+						<h3 class="stat_name">Likes</h3>
+						<h1 class="stat-value" data-value="100">&nbsp;</h1>
+					</div>
+				</section>
+			</section>
+		</main>
+		<main id="user_reviews">
+			<section class="content">
+				<h1 class="center section-heading">User reviews</h1>
+				<section id="user_review_list" class="section-content">
+					<div class="review-card">
+						<img class="user-avatar" src="images/user1.png" />
+						<h2 class="user-name">User 1</h2>
+						<div class="user-review">Review 1</div>
+					</div>
+					<div class="review-card">
+						<img class="user-avatar" src="images/user1.png" />
+						<h2 class="user-name">User 2</h2>
+						<div class="user-review">Review 2</div>
+					</div>
+				</section>
+				<div class="right"><a href="#">More ratings <i class="fas fa-angle-right"></i></a></div>
+			</section>
+		</main>
+
+		<footer>
+			<section class="content">
+				<section>
+					<h1 class="title">Codingboat</h1>
+					<a href="tel:+0-000-000-0000"><i class="fas fa-phone-alt"></i> <b>Phone: </b>+0 000 000 0000</a><br>
+					<a href="mailto:email@example.com"><i class="far fa-envelope"></i> <b>Email: </b>email@example.com</a>
+				</section>
+				<section>
+					<a href="#">Report problem</a><br>
+					<a href="#">Send feedback</a>
+				</section>
+				<section>
+					<div id="footer_social_icons">
+						<a href="#" class="fab fa-facebook"></a>
+						<a href="#" class="fab fa-twitter"></a>
+						<a href="#" class="fab fa-instagram-square"></a>
+						<a href="#" class="fab fa-telegram"></a>
+					</div>
+				</section>
+			</section>
+		</footer>
+
+		<a href="#" id="go_to_top_btn" class="hidden fas fa-angle-up"></a>
+	</div>
+</body>
+
+</html>

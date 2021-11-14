@@ -1,0 +1,42 @@
+#user_reviews a:hover {
+	color: var(--color-primary-dark);
+}
+
+#user_reviews .section-heading {
+	opacity: 0;
+}
+
+#user_review_list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+	justify-content: center;
+	gap: 20px;
+}
+
+.review-card {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 5px 20px #0004;
+	gap: 20px;
+	opacity: 0;
+}
+
+.user-avatar {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	overflow: hidden;
+	align-self: center;
+}
+
+.user-name {
+	align-self: center;
+}
+
+.user-review {
+	font-family: 'Tangerine', serif;
+	flex-grow: 1;
+	font-size: 1.5em;
+}

@@ -1,0 +1,52 @@
+header {
+	display: flex;
+}
+
+#location_header {
+	--padding: 10px;
+	color: var(--color-primary-dark);
+	font-size: 1.4em;
+	padding: var(--padding);
+	gap: var(--padding);
+	align-items: center;
+	background-color: var(--color-bg);
+}
+
+#location_header .icon, #location_header .arrow {
+	font-size: 2em;
+	width: 1em;
+	height: 1em;
+}
+
+#location_header .arrow {
+	stroke: var(--color-fg);
+}
+
+#info_header {
+	font-size: 1.5em;
+	background-color: var(--color-primary-dark);
+	color: white;
+	white-space: nowrap;
+	position: sticky;
+	top: 0;
+}
+
+#info_header .btn {
+	padding: 10px 15px;
+	background: transparent;
+	transition: background-color .2s;
+}
+
+#info_header .btn:hover {
+	background-color: #fff3;
+}
+
+#info_header .title {
+	font-size: 1.3em;
+	padding: 0 10px;
+	align-self: center;
+	flex-grow: 1;
+	font-weight: normal;
+	overflow-x: auto;
+	text-overflow: ellipsis;
+}

@@ -1,0 +1,166 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Codingboat</title>
+	<link rel="icon" href="../icons/site-icon.png" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+	<link rel="stylesheet" href="../styles/defaults.css" />
+	<link rel="stylesheet" href="../styles/variables.css" />
+	<link rel="stylesheet" href="styles/header.css" />
+	<link rel="stylesheet" href="styles/main.css" />
+	<link rel="stylesheet" href="styles/sidebar.css" />
+	<link rel="stylesheet" href="styles/media-queries.css" />
+
+	<script defer src="scripts/main.js"></script>
+	<script defer src="../scripts/init.js"></script>
+</head>
+
+<style>
+	div#root {
+		opacity: 0;
+		display: none;
+	}
+
+	body {
+		overflow-y: hidden;
+	}
+
+	div#preloader {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		gap: 20px;
+		background-color: #eee;
+		padding: 30px;
+	}
+
+	div#preloader .dot {
+		width: 50px;
+		height: 50px;
+		border-radius: 25px;
+		box-shadow: 0 5px 10px #0006;
+		background-color: white;
+		animation: load-anim .5s linear var(--anim-delay) infinite alternate;
+	}
+
+	@keyframes load-anim {
+		from {
+			transform: scale(.7);
+		}
+
+		to {
+			transform: scale(1);
+		}
+	}
+</style>
+
+<body>
+	<div id="preloader">
+		<div class="dot" style="--anim-delay: -.4s"></div>
+		<div class="dot" style="--anim-delay: -.2s"></div>
+		<div class="dot" style="--anim-delay: 0s"></div>
+	</div>
+
+	<div id="root">
+		<header id="location_header">
+			<img src="../icons/site-icon.png" class="icon" />
+			<h1 class="title">Codingboat</h1>
+			<svg class="arrow">
+				<use href="../icons/right-arrow.svg#content"></use>
+			</svg>
+			<h1 class="lang-name">HTML</h1>
+		</header>
+		<header id="info_header">
+			<button id="sidebar_btn" class="item btn fas fa-bars"></button>
+			<h1 class="item title">Introduction to HTML</h1>
+			<button id="theme_btn" class="item btn">
+				<i class="fas fa-moon"></i>
+				<span>Dark mode</span>
+			</button>
+			<button id="contents_btn" class="item btn">
+				<i class="fas fa-book-open"></i>
+				<span>Contents</span>
+			</button>
+		</header>
+
+		<main>
+			<section id="sidebar" open>
+				<div id="languages">
+					<h3>&nbsp;Languages</h3>
+					<nav id="lang_list">
+						<a>
+							<img src="../icons/html.png" />
+							<span class="lang-name">HTML</span>
+						</a>
+						<a>
+							<img src="../icons/css.png" />
+							<span class="lang-name">CSS</span>
+						</a>
+						<a>
+							<img src="../icons/javascript.png" />
+							<span class="lang-name">JavaScript</span>
+						</a>
+					</nav>
+				</div>
+				<h3><span class="lang-name">HTML</span> Tutorials</h3>
+				<nav id="tutorial_list">
+					<a href="#" class="current">Introduction to HTML</a>
+					<a href="#">Tutorial 2</a>
+					<a href="#">Tutorial 3</a>
+					<a href="#">Tutorial 4</a>
+				</nav>
+			</section>
+
+			<nav id="left_nav">
+				<section id="contents_container" open>
+					<section id="contents">
+						<h3>Contents</h3>
+						<nav id="content_list">
+							<a href="#">Heading 1</a>
+							<a href="#">Heading 2</a>
+							<a href="#">Heading 3</a>
+							<a href="#">Heading 4</a>
+						</nav>
+					</section>
+				</section>
+			</nav>
+			<section id="tutorial_area">
+				<h1>Heading 1</h1>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+				<h1>Heading 2</h1>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+				<div class="code">
+					<div class="titlebar">
+						Code title
+					</div>
+					<div class="content">
+						This is the code panel.<br>
+						Here you can write code as you like.
+					</div>
+				</div>
+				<h1>Heading 3</h1>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+				<h1>Heading 4</h1>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			</section>
+			<nav id="right_nav">
+				<section id="read_more">
+					<h3>Read more</h3>
+					<nav id="read_list">
+						<a href="#">Link 1</a>
+						<a href="#">Link 2</a>
+						<a href="#">Link 3</a>
+						<a href="#">Link 4</a>
+					</nav>
+				</section>
+			</nav>
+		</main>
+	</div>
+</body>
+
+</html>

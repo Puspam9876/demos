@@ -1,0 +1,31 @@
+#languages .section-heading {
+	opacity: 0;
+}
+
+#language_list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
+	justify-content: center;
+	gap: 20px;
+}
+
+.lang-card {
+	box-shadow: 0 5px 10px #0006;
+	display: flex;
+	align-items: center;
+	padding: 10px 15px;
+	gap: 10px;
+	opacity: 0;
+}
+
+.lang-icon {
+	height: 2em;
+}
+
+.lang-name {
+	font-size: 1.2em;
+}
+
+#languages a:hover {
+	color: var(--color-primary-dark);
+}

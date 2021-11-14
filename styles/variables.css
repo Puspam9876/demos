@@ -1,0 +1,6 @@
+:root {
+	--color-primary: #00ff73;
+	--color-primary-dark: #008b35;
+	--transition-duration: .5s;
+	--max-viewing-width: 1000px;
+}

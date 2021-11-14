@@ -1,0 +1,39 @@
+footer {
+	color: #eee;
+	background-color: black;
+}
+
+footer .content {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+	gap: 20px;
+}
+
+footer a {
+	line-height: 200%;
+}
+
+footer a:hover {
+	color: var(--color-primary);
+}
+
+footer .title {
+	font-size: 30px;
+	margin-bottom: 10px;
+	color: var(--color-primary);
+}
+
+#footer_social_icons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	font-size: 1.5em;
+}
+
+#footer_social_icons a {
+	display: inline-block;
+}
+
+#footer_social_icons a:hover {
+	transform: scale(1.3);
+}

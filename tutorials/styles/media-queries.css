@@ -1,0 +1,32 @@
+@media screen and (max-width: 800px) {
+	#location_header {
+		font-size: 1em;
+	}
+	#info_header .btn {
+		padding: 5px 10px;
+	}
+	#info_header .btn>span {
+		display: none;
+	}
+	main {
+		grid-template-columns: auto 1fr;
+	}
+	#right_nav {
+		grid-row-start: 2;
+	}
+	#sidebar {
+		position: fixed;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#location_header {
+		--padding: 5px;
+		font-size: 0.7em;
+	}
+	#contents {
+		position: fixed;
+		top: var(--top-spacing);
+		right: 0;
+	}
+}

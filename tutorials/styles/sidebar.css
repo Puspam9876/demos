@@ -1,0 +1,52 @@
+#sidebar {
+	z-index: 5;
+	height: calc(100vh - var(--top-spacing));
+	overflow-y: auto;
+	padding: 10px;
+	background-color: var(--color-bg-1);
+	color: var(--color-fg);
+}
+
+#languages {
+	border-radius: 4px;
+	padding: 5px;
+	margin-bottom: 10px;
+	background-color: var(--color-bg-2);
+	color: var(--color-fg);
+}
+
+#lang_list>a {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 10px 15px;
+}
+
+#lang_list>a.current {
+	background-color: var(--color-primary-dark);
+	color: white;
+}
+
+#lang_list>a:hover {
+	background-color: var(--color-bg-1);
+}
+
+#lang_list>a>img {
+	height: 1.2em;
+}
+
+#tutorial_list>a {
+	padding: 5px 10px;
+}
+
+#tutorial_list>a:hover {
+	background-color: var(--color-bg-2);
+}
+
+#tutorial_list>a.current {
+	background-color: var(--color-primary-dark);
+	color: white;
+	margin-left: -10px;
+	padding: 5px 20px;
+	border-radius: 0 1em 1em 0;
+}

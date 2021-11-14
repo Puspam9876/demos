@@ -1,0 +1,93 @@
+header {
+	position: fixed;
+	color: white;
+	z-index: 10;
+	--v-padding: 30px;
+	--h-padding: 30px;
+	transition: all var(--transition-duration);
+}
+
+header .content {
+	display: flex;
+	font-size: 1.5em;
+}
+
+header .icon {
+	font-size: 2em;
+	width: 1em;
+	height: 1em;
+	align-self: center;
+	margin-left: var(--h-padding);
+}
+
+header .title {
+	font-size: 2em;
+	color: var(--color-primary);
+}
+
+header nav {
+	flex-grow: 1;
+	display: flex;
+	justify-content: flex-end;
+	white-space: nowrap;
+	overflow-x: auto;
+}
+
+header .btn {
+	display: flex;
+	align-items: center;
+	font-size: 1.2em;
+	font-weight: bold;
+	background-color: transparent;
+}
+
+header .item {
+	padding: var(--v-padding) var(--h-padding);
+	transition: padding var(--transition-duration);
+}
+
+header .btn:hover {
+	background-color: #aaa5;
+}
+
+header.collapsed {
+	background-color: white;
+	box-shadow: 0 5px 10px #0007;
+	color: black;
+	--v-padding: 15px;
+}
+
+header.collapsed .title {
+	color: var(--color-primary-dark);
+}
+
+#overflow_menu {
+	position: absolute;
+	right: 0;
+	top: 100%;
+	max-width: 100%;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity var(--transition-duration);
+}
+
+#overflow_menu.open {
+	opacity: 1;
+	pointer-events: all;
+}
+
+#overflow_nav {
+	background-color: white;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0 5px 10px #0006;
+	display: flex;
+	flex-direction: column;
+}
+
+#overflow_nav .btn {
+	padding: 5px 10px;
+	color: black;
+	text-align: start;
+}
